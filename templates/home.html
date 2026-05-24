@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
+{% extends 'layout.html' %}
+{% block title %}
+Home
+{% endblock %}
 
+{% block content %}
 <h2>Home {{ nome }}</h2>
 <p>Acesse a página <a href="/about">about</a></p>
 <hr>
@@ -15,6 +11,4 @@
 <p>Nome: {{pessoa.nome}}</p>
 <p>Idade: {{pessoa.idade}}</p>
 <p>Cidade: {{pessoa.cidade}}</p>
-
-</body>
-</html>
+{% endblock %}
